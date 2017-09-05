@@ -4,7 +4,7 @@ describe('angularjs homepage todo list', function () {
     browser.manage().window().maximize();
   });
 
-  it('should add name and verify greeting', function(){
+  it('should add name and verify greeting', function () {
     var angularHomepage = new AngularHomePage();
     angularHomepage.open();
     angularHomepage.setName("Volo");
@@ -16,16 +16,14 @@ describe('angularjs homepage todo list', function () {
 
     angularHomepage.open();
 
-    element(by.model('todoList.todoText')).sendKeys('write first protractor test');
-    element(by.xpath('//input[@value="add"]')).click();
+    angularHomepage.addTodoText('write first protractor test');
+    angularHomepage.addToDoButtonClick();
 
-    var todoList = element.all(by.repeater('todo in todoList.todos'));
-    expect(todoList.count()).toEqual(3);
-    expect(todoList.get(2).getText()).toEqual('write first protractor test');
+    expect(angularHomepage.getToDoListSize()).toEqual(3);
+    expect(angularHomepage.getToDoElementTextByIndex(2)).toEqual('write first protractor test');
 
     // You wrote your first test, cross it off the list
-    todoList.get(2).element(by.css('input')).click();
-    var completedAmount = element.all(by.css('.done-true'));
-    expect(completedAmount.count()).toEqual(2);
+    angularHomepage.toDoInputElementClickByIndex(2);
+    expect(angularHomepage.getCompletedAmount()).toEqual(2);
   });
 });
