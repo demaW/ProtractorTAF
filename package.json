@@ -1,0 +1,23 @@
+{
+  "name": "protractortaf",
+  "version": "1.0.0",
+  "description": "test automation with protractor",
+  "main": "conf.js",
+  "dependencies": {
+    "protractor": "^5.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "*-spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demaW/protractorTAF.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demaW/protractorTAF/issues"
+  },
+  "homepage": "https://github.com/demaW/protractorTAF#readme"
+}
