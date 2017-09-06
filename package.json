@@ -6,7 +6,9 @@
   "dependencies": {
     "protractor": "^5.1.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "protractor-jasmine2-html-reporter": "0.0.7"
+  },
   "scripts": {
     "test": "*-spec.js"
   },

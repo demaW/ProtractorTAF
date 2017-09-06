@@ -1,4 +1,4 @@
-var AngularHomePage = function () {
+var AngularHomePage = function (){
     var nameInput = element(by.model('yourName'));
     var greeting = element(by.binding('yourName'));
     var todoInput = element(by.model('todoList.todoText'));
@@ -7,17 +7,17 @@ var AngularHomePage = function () {
     var toDoInputElement = {};
     var completedAmount = element.all(by.css('.done-true'));
 
-    this.setName = function (name) {
+    AngularHomePage.prototype.setName = function (name) {
         nameInput.sendKeys(name);
     };
-    this.getGreeting = function () {
+    AngularHomePage.prototype.getGreeting = function () {
         return greeting.getText();
     };
-    this.open = function () {
+    AngularHomePage.prototype.open = function () {
         browser.get('https://angularjs.org');
     };
 
-    this.addTodoText = function (text) {
+    AngularHomePage.prototype.addTodoText = function (text) {
         todoInput.sendKeys(text);
     };
 

@@ -1,7 +1,7 @@
 var AngularHomePage = require('./homepage.po.js');
-describe('angularjs homepage todo list', function () {
+describe('angularjs homepage verify greeting and todo list', function () {
   beforeAll(function () {
-    browser.manage().window().maximize();
+   console.log("I am before all");
   });
 
   it('should add name and verify greeting', function () {
